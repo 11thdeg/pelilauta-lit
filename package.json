@@ -17,6 +17,8 @@
     "lint": "eslint src --ext .js,.ts,.json --ignore-pattern node_modules/"
   },
   "dependencies": {
+    "@vaadin/router": "^1.7.4",
+    "firebase": "^9.9.1",
     "lit": "^2.0.2"
   },
   "devDependencies": {
