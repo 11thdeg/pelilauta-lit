@@ -19,7 +19,6 @@ export class App extends LitElement {
       <h1>App Content goes here?</h1>
       <charna-icon noun="fox"></charna-icon>
       <div id="AppContainer">
-        <div id="router-outlet"></div>
       </div>`
   }
 }
