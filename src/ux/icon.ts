@@ -1,17 +1,24 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import nounsFile from '../../public/proprietary/icons/nouns.json'
-import { logError } from './utils/loghelpers'
+import { logError } from '../utils/loghelpers'
 
 @customElement('charna-icon')
 export class CharnaIcon extends LitElement {
   @property({ type: String })
     noun: string
 
+  @property({ type: Boolean })
+    small: boolean = false
+
   static styles = css`
     img {
       height: 64px;
       width: 64px;
+    }
+    img.small {
+      height: 42px;
+      width: 42px;
     }
   `
 
@@ -25,7 +32,8 @@ export class CharnaIcon extends LitElement {
     const iconFileName = nouns[this.noun] || nouns.missing
     if (!iconFileName) logError(`Icon '${this.noun}' not found`) // log error if no icon found
     const iconpath = '../../public/proprietary/icons/light/' + iconFileName
-    return html`<img src="${iconpath}" alt="${this.noun}" />`
+    const classes = this.small ? 'small' : ''
+    return html`<img src="${iconpath}" alt="${this.noun}" class="${classes}"/>`
   }
 }
 
