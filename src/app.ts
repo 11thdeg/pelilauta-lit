@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import './ux/icon'
+import 'charna-ui'
 
 /**
  * Root element for the application.

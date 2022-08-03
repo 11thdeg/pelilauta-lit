@@ -7,12 +7,16 @@
     <title>Pelilauta 2</title>
     <script type="module" src="/src/app.ts"></script>
     <script type="module" src="/src/main.ts"></script>
+    <link rel="stylesheet" href="/src/styles/atomics.css">
   </head>
   <body>
-    <nav id="top-app-bar">
+    <nav id="top-app-bar" class="navbar">
       <a href="/">
         <charna-icon noun="fox" small/>
       </a>
+      <h1>Pelilauta</h1>
+      <charna-spacer/>
+      <charna-icon noun="menu" small/>
     </nav>
     <pelilauta-app></pelilauta-app>
     <div id="router-outlet"></div>
